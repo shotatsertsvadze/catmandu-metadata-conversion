@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+
+# Perl build artifacts (local::lib env lives outside this repo)
+*.bak
+blib/
+_build/
+Build
+pm_to_blib
+
+# Generated intermediate data (reproducible via scripts/run_pipeline.sh)
+data/intermediate/*.json

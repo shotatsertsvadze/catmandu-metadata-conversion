@@ -1,0 +1,104 @@
+# mods_mapping.fix
+#
+# Production Catmandu Fix script: DOAJ bibliographic CSV -> MODS-shaped JSON.
+#
+# Catmandu does all field mapping, splitting and trimming here. The
+# resulting "mods" structure is serialized into namespaced MODS 3.8 XML
+# by scripts/json_to_mods_xml.pl, which adds no further data logic.
+#
+# Convention used below: an element with XML attributes is represented
+# as a hash with a "value" key (the element's text content) plus one key
+# per attribute; an element with no attributes is a plain scalar.
+#
+# Missing-field policy: DOI, Language_normalized and Licence are the only
+# source columns with missing values (verified: 23 / 15 / 6 of 1000 rows).
+# Each is wrapped in "if all_match(FIELD, '.')" so that when the source
+# value is empty, no MODS element -- and no attribute-only placeholder --
+# is produced at all. A final vacuum() removes any other leftover empty
+# structure as a safety net.
+
+# --- Title: titleInfo/title ------------------------------------------
+copy_field(Title, mods.titleInfo.title)
+trim(mods.titleInfo.title)
+
+# --- Authors: name[type=personal]/namePart with role/roleTerm --------
+copy_field(Authors, author_list)
+split_field(author_list, '[|]')
+trim(author_list.*)
+
+do list(path:author_list, var:author)
+    copy_field(author, mods.name.$append.namePart)
+end
+
+# documented MODS example: roleTerm type="text" authority="marcrelator" -> author
+do list(path:mods.name)
+    add_field(type, personal)
+    add_field(role.roleTerm.value, author)
+    add_field(role.roleTerm.type, text)
+    add_field(role.roleTerm.authority, marcrelator)
+end
+remove_field(author_list)
+
+# --- DOI: identifier type="doi" (omitted if source DOI is empty) -----
+if all_match(DOI, '.')
+    copy_field(DOI, mods.identifier.value)
+    trim(mods.identifier.value)
+    add_field(mods.identifier.type, doi)
+end
+
+# --- Language: language/languageTerm (omitted if source is empty) ----
+# Source codes are ISO 639-1 (two-letter: en, es, fr), stated as such.
+if all_match(Language_normalized, '.')
+    copy_field(Language_normalized, mods.language.languageTerm.value)
+    trim(mods.language.languageTerm.value)
+    add_field(mods.language.languageTerm.type, code)
+    add_field(mods.language.languageTerm.authority, iso639-1)
+end
+
+# --- Publisher: originInfo/agent (MODS 3.8; <publisher> is deprecated) -
+copy_field(Publisher, mods.originInfo.agent.namePart)
+trim(mods.originInfo.agent.namePart)
+add_field(mods.originInfo.agent.role.roleTerm, Publisher)
+
+# --- Date: originInfo/dateIssued, preserved exactly as given ----------
+# Source format/day-month convention is not asserted; no encoding attribute.
+copy_field(Date, mods.originInfo.dateIssued)
+
+# --- Subjects: one subject/topic element per pipe-separated term -----
+copy_field(Subjects, subject_list)
+split_field(subject_list, '[|]')
+trim(subject_list.*)
+
+do list(path:subject_list, var:subject)
+    copy_field(subject, mods.subject.$append.topic)
+end
+remove_field(subject_list)
+
+# --- ISSN: relatedItem type="host" with identifier(s) type="issn" ----
+# A record may list more than one ISSN (print + electronic): split on '|'.
+copy_field(ISSNs, issn_list)
+split_field(issn_list, '[|]')
+trim(issn_list.*)
+
+do list(path:issn_list, var:issn)
+    copy_field(issn, mods.relatedItem.identifier.$append.value)
+    add_field(mods.relatedItem.identifier.$last.type, issn)
+end
+remove_field(issn_list)
+add_field(mods.relatedItem.type, host)
+
+# --- URL: location/url, marked as the primary access point -----------
+copy_field(URL, mods.location.url.value)
+add_field(mods.location.url.usage, primary)
+
+# --- Licence: accessCondition (omitted if source Licence is empty) ---
+# Source label preserved verbatim; no CC version/URL is invented.
+if all_match(Licence, '.')
+    copy_field(Licence, mods.accessCondition.value)
+    trim(mods.accessCondition.value)
+    add_field(mods.accessCondition.type, 'use and reproduction')
+end
+
+# --- Keep only the mapped "mods" structure; remove any empty leftovers -
+retain(mods)
+vacuum()

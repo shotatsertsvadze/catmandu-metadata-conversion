@@ -1,0 +1,40 @@
+copy_field(Title, mods.titleInfo.title)
+trim(mods.titleInfo.title)
+
+copy_field(Authors, author_list)
+split_field(author_list, '[|]')
+trim(author_list.*)
+
+do list(path:author_list, var:author)
+    copy_field(author, mods.name.$append.namePart)
+end
+
+do list(path:mods.name)
+    add_field(role.roleTerm, author)
+end
+
+
+
+copy_field(DOI, mods.identifier)
+trim(mods.identifier)
+copy_field(Language_normalized, mods.language.languageTerm)
+trim(mods.language.languageTerm)
+
+copy_field(Publisher, mods.originInfo.publisher)
+trim(mods.originInfo.publisher)
+
+copy_field(Subjects, subject_list)
+split_field(subject_list, '[|]')
+trim(subject_list.*)
+
+do list(path:subject_list, var:subject)
+    copy_field(subject, mods.subject.$append.topic)
+end
+
+copy_field(Subjects, subject_list)
+split_field(subject_list, '[|]')
+trim(subject_list.*)
+
+do list(path:subject_list, var:subject)
+    copy_field(subject, mods.subject.$append.topic)
+end
