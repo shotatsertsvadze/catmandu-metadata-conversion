@@ -56,8 +56,11 @@ if all_match(Language_normalized, '.')
 end
 
 # --- Publisher: originInfo/agent (MODS 3.8; <publisher> is deprecated) -
+# <agent> reuses the <name> content model, so it takes the same type
+# attribute; publishers are organizations, hence "corporate".
 copy_field(Publisher, mods.originInfo.agent.namePart)
 trim(mods.originInfo.agent.namePart)
+add_field(mods.originInfo.agent.type, corporate)
 add_field(mods.originInfo.agent.role.roleTerm, Publisher)
 
 # --- Date: originInfo/dateIssued, preserved exactly as given ----------

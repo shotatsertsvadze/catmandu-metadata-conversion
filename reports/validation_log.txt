@@ -1,0 +1,1 @@
+data/output/doaj_mods_collection.xml validates

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modsCollection xmlns="http://www.loc.gov/mods/v3">
+  <mods version="3.8">
+    <accessCondition type="use and reproduction">CC BY</accessCondition>
+    <identifier type="doi">10.3390/e17127853</identifier>
+    <language>
+      <languageTerm authority="iso639-1" type="code">en</languageTerm>
+    </language>
+    <location>
+      <url usage="primary">https://doaj.org/article/b75e8d5cca3f46cbbd63e91be5b32412</url>
+    </location>
+    <name type="personal">
+      <namePart>Flavia Pennini</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
+      <namePart>Angelo Plastino</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <originInfo>
+      <agent type="corporate">
+        <namePart>MDPI AG</namePart>
+        <role>
+          <roleTerm>Publisher</roleTerm>
+        </role>
+      </agent>
+      <dateIssued>01/11/2015</dateIssued>
+    </originInfo>
+    <relatedItem type="host">
+      <identifier type="issn">1099-4300</identifier>
+    </relatedItem>
+    <subject>
+      <topic>Fisher information</topic>
+    </subject>
+    <subject>
+      <topic>quasi-probabilities</topic>
+    </subject>
+    <subject>
+      <topic>complementarity</topic>
+    </subject>
+    <subject>
+      <topic>Physics</topic>
+    </subject>
+    <subject>
+      <topic>QC1-999</topic>
+    </subject>
+    <subject>
+      <topic>Science</topic>
+    </subject>
+    <subject>
+      <topic>Q</topic>
+    </subject>
+    <titleInfo>
+      <title>The Fisher Thermodynamics of Quasi-Probabilities</title>
+    </titleInfo>
+  </mods>
+  <mods version="3.8">
+    <accessCondition type="use and reproduction">CC BY</accessCondition>
+    <identifier type="doi">10.3390/agriculture5041172</identifier>
+    <language>
+      <languageTerm authority="iso639-1" type="code">en</languageTerm>
+    </language>
+    <location>
+      <url usage="primary">https://doaj.org/article/0edc5af6672641c0bd45608812a34f9e</url>
+    </location>
+    <name type="personal">
+      <namePart>Naveed Aslam</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
+      <namePart>Peter C. Wynn</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <originInfo>
+      <agent type="corporate">
+        <namePart>MDPI AG</namePart>
+        <role>
+          <roleTerm>Publisher</roleTerm>
+        </role>
+      </agent>
+      <dateIssued>01/11/2015</dateIssued>
+    </originInfo>
+    <relatedItem type="host">
+      <identifier type="issn">2077-0472</identifier>
+    </relatedItem>
+    <subject>
+      <topic>aflatoxins</topic>
+    </subject>
+    <subject>
+      <topic>AFM1</topic>
+    </subject>
+    <subject>
+      <topic>AFB1</topic>
+    </subject>
+    <subject>
+      <topic>milk marketing chains</topic>
+    </subject>
+    <subject>
+      <topic>hepatocellular carcinoma</topic>
+    </subject>
+    <subject>
+      <topic>Agriculture (General)</topic>
+    </subject>
+    <subject>
+      <topic>S1-972</topic>
+    </subject>
+    <subject>
+      <topic>Agriculture</topic>
+    </subject>
+    <subject>
+      <topic>S</topic>
+    </subject>
+    <titleInfo>
+      <title>Aflatoxin Contamination of the Milk Supply: A Pakistan Perspective</title>
+    </titleInfo>
+  </mods>
+  <mods version="3.8">
+    <accessCondition type="use and reproduction">CC BY</accessCondition>
+    <identifier type="doi">10.3390/ijms161226101</identifier>
+    <language>
+      <languageTerm authority="iso639-1" type="code">en</languageTerm>
+    </language>
+    <location>
+      <url usage="primary">https://doaj.org/article/d9fe469f75a0442382b84ba4f50007ee</url>
+    </location>
+    <name type="personal">
+      <namePart>Rafael R. C. Cuadrat</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
+      <namePart>Juliano C. Cury</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
+      <namePart>Alberto M. R. Dávila</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <originInfo>
+      <agent type="corporate">
+        <namePart>MDPI AG</namePart>
+        <role>
+          <roleTerm>Publisher</roleTerm>
+        </role>
+      </agent>
+      <dateIssued>01/11/2015</dateIssued>
+    </originInfo>
+    <relatedItem type="host">
+      <identifier type="issn">1422-0067</identifier>
+    </relatedItem>
+    <subject>
+      <topic>PKS</topic>
+    </subject>
+    <subject>
+      <topic>NRPS</topic>
+    </subject>
+    <subject>
+      <topic>metagenomics</topic>
+    </subject>
+    <subject>
+      <topic>environmental genomics</topic>
+    </subject>
+    <subject>
+      <topic>upwelling</topic>
+    </subject>
+    <subject>
+      <topic>coastal environment</topic>
+    </subject>
+    <subject>
+      <topic>Chemistry</topic>
+    </subject>
+    <subject>
+      <topic>QD1-999</topic>
+    </subject>
+    <subject>
+      <topic>Science</topic>
+    </subject>
+    <subject>
+      <topic>Q</topic>
+    </subject>
+    <titleInfo>
+      <title>Metagenomic Analysis of Upwelling-Affected Brazilian Coastal Seawater Reveals Sequence Domains of Type I PKS and Modular NRPS</title>
+    </titleInfo>
+  </mods>
+  <mods version="3.8">
+    <accessCondition type="use and reproduction">CC BY</accessCondition>
+    <identifier type="doi">10.3390/inorganics3040534</identifier>
+    <language>
+      <languageTerm authority="iso639-1" type="code">en</languageTerm>
+    </language>
+    <location>
+      <url usage="primary">https://doaj.org/article/95606ed39deb4f43b96f7e6308ad15d3</url>
+    </location>
+    <name type="personal">
+      <namePart>Fabrizio Ortu</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
+      <namePart>Hao Zhu</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
+      <namePart>Marie-Emmanuelle Boulon</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
+      <namePart>David P. Mills</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <originInfo>
+      <agent type="corporate">
+        <namePart>MDPI AG</namePart>
+        <role>
+          <roleTerm>Publisher</roleTerm>
+        </role>
+      </agent>
+      <dateIssued>01/11/2015</dateIssued>
+    </originInfo>
+    <relatedItem type="host">
+      <identifier type="issn">2304-6740</identifier>
+    </relatedItem>
+    <subject>
+      <topic>lanthanide</topic>
+    </subject>
+    <subject>
+      <topic>cerium</topic>
+    </subject>
+    <subject>
+      <topic>scorpionate</topic>
+    </subject>
+    <subject>
+      <topic>tris(pyrazolyl)borate</topic>
+    </subject>
+    <subject>
+      <topic>radical</topic>
+    </subject>
+    <subject>
+      <topic>redox non-innocent</topic>
+    </subject>
+    <subject>
+      <topic>Inorganic chemistry</topic>
+    </subject>
+    <subject>
+      <topic>QD146-197</topic>
+    </subject>
+    <titleInfo>
+      <title>Synthesis and Reactivity of a Cerium(III) Scorpionate Complex Containing a Redox Non-Innocent 2,2′-Bipyridine Ligand</title>
+    </titleInfo>
+  </mods>
+  <mods version="3.8">
+    <accessCondition type="use and reproduction">CC BY</accessCondition>
+    <identifier type="doi">10.3390/hydrology2040289</identifier>
+    <language>
+      <languageTerm authority="iso639-1" type="code">en</languageTerm>
+    </language>
+    <location>
+      <url usage="primary">https://doaj.org/article/18b1d70730d44573ab5c264b7f93e041</url>
+    </location>
+    <name type="personal">
+      <namePart>Magali Troin</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
+      <namePart>Richard Arsenault</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <name type="personal">
+      <namePart>François Brissette</namePart>
+      <role>
+        <roleTerm authority="marcrelator" type="text">author</roleTerm>
+      </role>
+    </name>
+    <originInfo>
+      <agent type="corporate">
+        <namePart>MDPI AG</namePart>
+        <role>
+          <roleTerm>Publisher</roleTerm>
+        </role>
+      </agent>
+      <dateIssued>01/11/2015</dateIssued>
+    </originInfo>
+    <relatedItem type="host">
+      <identifier type="issn">2306-5338</identifier>
+    </relatedItem>
+    <subject>
+      <topic>snow models</topic>
+    </subject>
+    <subject>
+      <topic>hydrological models</topic>
+    </subject>
+    <subject>
+      <topic>snowmelt</topic>
+    </subject>
+    <subject>
+      <topic>uncertainty</topic>
+    </subject>
+    <subject>
+      <topic>Canada</topic>
+    </subject>
+    <subject>
+      <topic>Science</topic>
+    </subject>
+    <subject>
+      <topic>Q</topic>
+    </subject>
+    <titleInfo>
+      <title>Performance and Uncertainty Evaluation of Snow Models on Snowmelt Flow Simulations over a Nordic Catchment (Mistassibi, Canada)</title>
+    </titleInfo>
+  </mods>
+</modsCollection>
