@@ -1,0 +1,11 @@
+PASS  record count: 1000 source rows, 1000 <mods> elements
+PASS  title text matches source (1000/1000)
+PASS  author count matches source (no duplication/loss) (1000/1000)
+PASS  subject/topic count matches source (no duplication/loss) (1000/1000)
+PASS  DOI present/absent and unchanged correctly (1000/1000)
+PASS  Licence present/absent and unchanged correctly (1000/1000)
+PASS  Language present/absent and unchanged correctly (1000/1000)
+PASS  ISSN count matches source (incl. multi-ISSN records) (1000/1000)
+PASS  Unicode strings preserved unescaped (20 sampled) (20/20)
+
+RESULT: all checks passed.
